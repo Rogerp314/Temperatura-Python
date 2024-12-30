@@ -1,5 +1,8 @@
 #Esse arquivo tem o medidor de temperatura para saber qual está mais próxima de 0
 #Coletando os dados
+import verificador as v
+
+
 lista_temp = list()
 def temperaturas(t):
     from time import sleep
@@ -24,11 +27,6 @@ def temperaturas(t):
 
 def proximo0(lista_temp):
     print()
-    for i, v in enumerate(lista_temp):
-        if v < 0:
-            valor_positivo = v*-1
-            lista_temp.remove(v)
-            lista_temp.insert(i,valor_positivo)
     #Verificando qual temperatura está mais próxima de 0
     lista_distancia = list()
     for e in lista_temp:
